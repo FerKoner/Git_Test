@@ -23,5 +23,14 @@ public class Main {
 
         for (double element : array)
             System.out.print(element + ",");
+
+        // Output primal nums
+        // Lesson 3
+        System.out.println();
+        int[] nums = new int[100];
+        for(int i = 0; i < nums.length; i++)
+            nums[i] = i + 2;
+
+        PrimesOutput.outputPrimesFromArray(nums);
     }
 }
