@@ -1,5 +1,7 @@
 package Fer.company;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -32,5 +34,15 @@ public class Main {
             nums[i] = i + 2;
 
         PrimesOutput.outputPrimesFromArray(nums);
+
+        // Remove number from int array
+        // Lesson 4
+        int[] int_array = {0,1,2,2,3,0,4,2};
+        Scanner newInt = new Scanner(System.in);
+        int val = newInt.nextInt();
+        int[] newArray= DeleteFromArray.removeIntFromArray(int_array, val);
+        for (int element : newArray)
+            System.out.print(element + ",");
+
     }
 }
