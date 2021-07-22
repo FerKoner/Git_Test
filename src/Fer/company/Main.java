@@ -8,7 +8,7 @@ public class Main {
 
         // Min max average
         // Lesson 1
-        double[] array = new double[100];
+        double[] array = new double[10];
         for(int i = 0; i < array.length; i++)
             array[i] = Math.random() * 100;
 
@@ -16,5 +16,12 @@ public class Main {
         System.out.println(minMaxAverage.getMax(array));
         System.out.println(minMaxAverage.getMin(array));
         System.out.println(minMaxAverage.getAverage(array));
+
+        // Bubble sort
+        // Lesson 2
+        BubbleSort.sort(array);
+
+        for (double element : array)
+            System.out.print(element + ",");
     }
 }
