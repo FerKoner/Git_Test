@@ -1,6 +1,7 @@
 package Fer.company;
 
-import java.util.Scanner;
+import java.util.Collection;
+import java.util.*;
 
 public class Main {
 
@@ -44,5 +45,22 @@ public class Main {
         for (int element : newArray)
             System.out.print(element + ",");
 
+        // Bowling game. Count point and het winner
+        // Lesson 5
+        Bowling game = new Bowling();
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i < 3;i++){
+            String input = sc.nextLine();
+            String[] values = input.split(" ");
+            String name = values[0];
+            int points = Integer.parseInt(values[1]);
+            game.addPlayer(name, points);
+        }
+
+        game.getWinner();
+
     }
+
+
+
 }
