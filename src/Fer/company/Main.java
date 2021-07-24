@@ -59,6 +59,18 @@ public class Main {
 
         game.getWinner();
 
+        // Vector training class
+        // Lesson 6
+        Vector[] vectors = Vector.getVectorsArray(10);
+        System.out.println(vectors[0]);
+        System.out.println(vectors[1]);
+        System.out.println(vectors[0].getLength());
+        System.out.println(vectors[0].getScalarProduct(vectors[1]));
+        System.out.println(vectors[0].getCrossProduct(vectors[1]));
+        System.out.println(vectors[0].getCosCorner(vectors[1]));
+        System.out.println(vectors[0].getSum(vectors[1]));
+        System.out.println(vectors[0].getDiff(vectors[1]));
+
     }
 
 
