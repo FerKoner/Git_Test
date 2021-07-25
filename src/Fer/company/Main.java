@@ -6,6 +6,7 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
+
         System.out.println("First commit");
         System.out.println("Second commit");
 
@@ -70,6 +71,13 @@ public class Main {
         System.out.println(vectors[0].getCosCorner(vectors[1]));
         System.out.println(vectors[0].getSum(vectors[1]));
         System.out.println(vectors[0].getDiff(vectors[1]));
+
+        // Generating a random element with a weight
+        // Lesson 7
+        int[] values = {1,2,3,4,5,6};
+        int[] weights = {1,5,3,7,1,4};
+        RandomFromArrayByWeight randomFromArrayByWeight= new RandomFromArrayByWeight(values, weights);
+        System.out.println(randomFromArrayByWeight.getRandom());
 
     }
 
