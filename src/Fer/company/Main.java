@@ -1,5 +1,6 @@
 package Fer.company;
 
+import Hierarсhy.*;
 import java.util.*;
 
 public class Main {
@@ -85,6 +86,18 @@ public class Main {
             array[i] = Math.random() * 100;
         Arrays.sort(array);
         System.out.println(BinarySearch.findElementInArray(array, array[2258], 0 , array.length));
+
+        // Hierarchy
+        // Lesson 9
+        Ball ball = new Ball(4.5);
+        Cylinder cylyinder = new Cylinder(2, 2);
+        Pyramid pyramid = new Pyramid(100, 100);
+
+        Box box = new Box(1000);
+
+        System.out.println(box.add(ball));
+        System.out.println(box.add(cylyinder));
+        System.out.println(box.add(pyramid));
     }
 
 
