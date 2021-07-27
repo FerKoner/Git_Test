@@ -1,6 +1,5 @@
 package Fer.company;
 
-import java.util.Collection;
 import java.util.*;
 
 public class Main {
@@ -79,6 +78,13 @@ public class Main {
         RandomFromArrayByWeight randomFromArrayByWeight= new RandomFromArrayByWeight(values, weights);
         System.out.println(randomFromArrayByWeight.getRandom());
 
+        // Binary search
+        // Lesson 8
+        array = new double[100000];
+        for(int i = 0; i < array.length; i++)
+            array[i] = Math.random() * 100;
+        Arrays.sort(array);
+        System.out.println(BinarySearch.findElementInArray(array, array[2258], 0 , array.length));
     }
 
 
