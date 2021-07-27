@@ -1,6 +1,8 @@
 package Fer.company;
 
 import Hierarсhy.*;
+import Interfaces.*;
+
 import java.util.*;
 
 public class Main {
@@ -89,15 +91,30 @@ public class Main {
 
         // Hierarchy
         // Lesson 9
-        Ball ball = new Ball(4.5);
-        Cylinder cylyinder = new Cylinder(2, 2);
-        Pyramid pyramid = new Pyramid(100, 100);
+        Hierarсhy.Ball ball = new Hierarсhy.Ball(4.5);
+        Hierarсhy.Cylinder cylyinder = new Hierarсhy.Cylinder(2, 2);
+        Hierarсhy.Pyramid pyramid = new Hierarсhy.Pyramid(100, 100);
 
-        Box box = new Box(1000);
+        Hierarсhy.Box box = new Hierarсhy.Box(1000);
 
         System.out.println(box.add(ball));
         System.out.println(box.add(cylyinder));
         System.out.println(box.add(pyramid));
+
+        // Interfaces
+        // Lesson 10
+        Interfaces.Pyramid iPyramid = new Interfaces.Pyramid(10, 10, 60);
+        Interfaces.Ball iBall = new Interfaces.Ball(4.5);
+        Interfaces.Cylinder iCylinder = new Interfaces.Cylinder(1, 10);
+        Interfaces.Box iBox = new Interfaces.Box(10);
+
+        System.out.println(iPyramid.getVolume());
+        System.out.println(iBall.getVolume());
+        System.out.println(iCylinder.getVolume());
+
+        System.out.println(iBox.add(iBall));
+        System.out.println(iBox.add(iCylinder));
+        System.out.println(iBox.add(iPyramid));
     }
 
 
