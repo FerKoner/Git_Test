@@ -115,6 +115,25 @@ public class Main {
         System.out.println(iBox.add(iBall));
         System.out.println(iBox.add(iCylinder));
         System.out.println(iBox.add(iPyramid));
+
+        // The longest word
+        // Lesson 11
+        ArrayList<String> arrayList = new ArrayList<>();
+        char[] alphabet = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+        int stringSize, size = 10;
+        StringBuilder word = new StringBuilder();
+        for(int i = 0; i<size; i++){
+            word.delete(0, word.length());
+            stringSize = (int) (Math.random() * 25);
+            while (word.length() < stringSize){
+                word.append(alphabet[(int)(Math.random() * (alphabet.length - 1))]);
+            }
+            arrayList.add(word.toString());
+        }
+        for(String str : arrayList){
+            System.out.println(str);
+        }
+        System.out.println("The longest: " + StringPractice.getLongestString(arrayList));
     }
 
 
